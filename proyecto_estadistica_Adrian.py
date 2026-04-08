@@ -15,28 +15,40 @@ warnings.filterwarnings('ignore')
 
 # CONFIGURACIÓN DE PÁGINA
 
-def set_bg_professional():
+def set_bg_tech():
     st.markdown(
         """
         <style>
         .stApp {
-            background: linear-gradient(135deg, #1e1e2f 0%, #252a41 100%);
-            color: #ffffff;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url("https://www.toptal.com/designers/subtlepatterns/patterns/netglow.png");
+            background-color: #0e1117;
+            background-attachment: fixed;
+            background-size: cover;
         }
-        /* Estilo para que las tablas y textos sean legibles */
-        .stMarkdown, .stTable {
-            color: #e0e0e0;
-        }}
-        /* Títulos en un tono que resalte */
+        
+        /* Estilo para que el contenido resalte sobre el fondo */
+        .main .block-container {
+            background-color: rgba(14, 17, 23, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
         h1, h2, h3 {
             color: #4da3ff !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .stMarkdown {
+            color: #ffffff;
         }
         </style>
         """,
-        unsafe_allow_html=True  
+        unsafe_allow_html=True
     )
 
-set_bg_professional()
+set_bg_tech()
 
 st.set_page_config(
     page_title="Proyecto 20% Estadística Inferencial",
