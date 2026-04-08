@@ -15,41 +15,6 @@ warnings.filterwarnings('ignore')
 
 # CONFIGURACIÓN DE PÁGINA
 
-def set_bg_tech():
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                              url("https://www.toptal.com/designers/subtlepatterns/patterns/netglow.png");
-            background-color: #0e1117;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        
-        /* Estilo para que el contenido resalte sobre el fondo */
-        .main .block-container {
-            background-color: rgba(14, 17, 23, 0.8);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        h1, h2, h3 {
-            color: #4da3ff !important;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .stMarkdown {
-            color: #ffffff;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-set_bg_tech()
-
 st.set_page_config(
     page_title="Proyecto 20% Estadística Inferencial",
     page_icon="📊",
@@ -60,6 +25,34 @@ st.set_page_config(
 # ESTILOS CSS
 st.markdown("""
 <style>
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #0a1628 0%, #0d2137 40%, #0a1f35 70%, #061220 100%);
+    background-attachment: fixed;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(10, 22, 40, 0.95);
+}
+
+[data-testid="stSidebar"] {
+    background: rgba(10, 22, 40, 0.97);
+}
+
+[data-testid="stMainBlockContainer"] {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+}
+
+.stMarkdown, .stDataFrame, p, li, label {
+    color: #e8f0fe !important;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff !important;
+}
     .main-header {
         background: linear-gradient(135deg, #1a3a5c 0%, #2d6a9f 100%);
         color: white; padding: 2rem; border-radius: 12px;
