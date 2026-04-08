@@ -17,23 +17,23 @@ warnings.filterwarnings('ignore')
 
 def set_bg_professional():
     st.markdown(
-        f"""
+        """
         <style>
-        .stApp {{
+        .stApp {
             background: linear-gradient(135deg, #1e1e2f 0%, #252a41 100%);
             color: #ffffff;
-        }}
+        }
         /* Estilo para que las tablas y textos sean legibles */
-        .stMarkdown, .stTable {{
+        .stMarkdown, .stTable {
             color: #e0e0e0;
         }}
         /* Títulos en un tono que resalte */
-        h1, h2, h3 {{
+        h1, h2, h3 {
             color: #4da3ff !important;
-        }}
+        }
         </style>
         """,
-        unsafe_output_code=True
+        unsafe_allow_html=True  
     )
 
 set_bg_professional()
